@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yumebana Hyouga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script src="case_model.js"></script>
+</head>
+<body>
+
+<nav>
+  <button class="logo" data-scroll="hero">Yumebana<em>.</em></button>
+  <ul class="nav-links">
+    <li><a href="#s-showcase" data-scroll="s-showcase">Showcase</a></li>
+    <li><a href="#s-glass"    data-scroll="s-glass">Design</a></li>
+    <li><a href="#s-interior" data-scroll="s-interior">Interior</a></li>
+    <li><a href="#s-price"    data-scroll="s-price">Pricing</a></li>
+    <li><a href="#s-faq"      data-scroll="s-faq">FAQ</a></li>
+  </ul>
+  <button class="nav-btn" data-scroll="s-price">今すぐ予約</button>
+</nav>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section id="hero" class="stripe" data-theme="light">
+  <div class="stripe-inner">
+    <div class="canvas-wrap" id="wrap0">
+      <canvas id="c0"></canvas>
+      <div class="drag-hint">ドラッグで回転</div>
+    </div>
+    <div class="text-panel">
+      <div class="tag reveal">// Yumebana Hyouga · 2026</div>
+      <h1 class="headline reveal">Built<br/>to be<br/><em>seen.</em></h1>
+      <p class="desc reveal">Hyouga ── 開封の瞬間から、完成されている。<br/>白い mid-tower の決定形。</p>
+      <div class="actions reveal">
+        <button class="btn-p" data-scroll="s-price">今すぐ予約する　¥24,900</button>
+        <button class="btn-g" data-scroll="s-showcase">詳細を見る</button>
+      </div>
+      <div class="stats reveal">
+        <div><div class="stat-num">420mm</div><div class="stat-label">ラジエーター</div></div>
+        <div><div class="stat-num">4mm</div><div class="stat-label">強化ガラス</div></div>
+        <div><div class="stat-num">E-ATX</div><div class="stat-label">マザーボード</div></div>
+        <div><div class="stat-num">175mm</div><div class="stat-label">CPU クーラー</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SHOWCASE ═══════════════════════════ -->
+<section id="s-showcase" class="stripe flip" data-theme="dark">
+  <div class="stripe-inner">
+    <div class="text-panel dark">
+      <div class="tag reveal">// 01 — Showcase</div>
+      <h2 class="headline reveal">視せる、<br/><em>前面ガラス。</em></h2>
+      <p class="desc reveal">前面は強化ガラス。内部の構成と紫の光がそのまま透けて見える。視せるためのフロント。</p>
+      <ul class="bullet-list reveal">
+        <li>ARGB 140mm ファン × 3 同梱（天面）</li>
+        <li>磁気ダストフィルター・ワンタッチ着脱</li>
+        <li>天面・底面ともに最大 420mm ラジエーター対応</li>
+      </ul>
+      <div class="stats reveal">
+        <div><div class="stat-num">3+3</div><div class="stat-label">140mm スロット（天/底）</div></div>
+        <div><div class="stat-num">410mm</div><div class="stat-label">GPU 最大長</div></div>
+      </div>
+    </div>
+    <div class="canvas-wrap" id="wrap1">
+      <canvas id="c1"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ GLASS ══════════════════════════════ -->
+<section id="s-glass" class="stripe" data-theme="light">
+  <div class="stripe-inner">
+    <div class="canvas-wrap" id="wrap2">
+      <canvas id="c2"></canvas>
+    </div>
+    <div class="text-panel">
+      <div class="tag reveal">// 02 — Design</div>
+      <h2 class="headline reveal">ガラス、<br/>端から<em>端まで。</em></h2>
+      <p class="desc reveal">左側面も強化ガラス 4mm。4 つの磁気ボタンで固定、ドライバー不要で開閉。</p>
+      <ul class="spec-list reveal">
+        <li><span class="k">寸法</span><span class="v">W210 × H460 × D420 mm</span></li>
+        <li><span class="k">素材</span><span class="v">強化ガラス 4mm</span></li>
+        <li><span class="k">取付</span><span class="v">マグネット式 × 4</span></li>
+        <li><span class="k">色</span><span class="v">透明・無着色</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ INTERIOR ═══════════════════════════ -->
+<section id="s-interior" class="stripe flip" data-theme="dark">
+  <div class="stripe-inner">
+    <div class="text-panel dark">
+      <div class="tag reveal">// 03 — Interior</div>
+      <h2 class="headline reveal">内も外も、<br/><em>静かに。</em></h2>
+      <p class="desc reveal">フロントと左サイドの角越しに見える内装。配線は右側のホワイトパネルの裏に隠れ、視界はクリーン。</p>
+      <ul class="bullet-list reveal">
+        <li>縦置き GPU 用ライザー（オプション）</li>
+        <li>CPU クーラー交換用カットアウト付きトレー</li>
+        <li>2.5" × 4 ／ 3.5" × 2 ベイ（右パネル裏）</li>
+      </ul>
+      <div class="stats reveal">
+        <div><div class="stat-num">35mm</div><div class="stat-label">裏配線</div></div>
+        <div><div class="stat-num">4+2</div><div class="stat-label">ドライブベイ</div></div>
+      </div>
+    </div>
+    <div class="canvas-wrap" id="wrap3">
+      <canvas id="c3"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ PRICING ════════════════════════════ -->
+<section id="s-price" class="stripe" data-theme="light">
+  <div class="stripe-inner">
+    <div class="canvas-wrap" id="wrap4">
+      <canvas id="c4"></canvas>
+    </div>
+    <div class="text-panel">
+      <div class="tag reveal">// 予約</div>
+      <h2 class="headline reveal">Arctic White<br/><em>Edition.</em></h2>
+      <div class="price-box reveal">
+        <span class="price-cur">¥</span>
+        <span class="price-amt">24,900</span>
+      </div>
+      <ul class="bullet-list reveal">
+        <li>ARGB 140mm ファン × 3 同梱</li>
+        <li>全国送料無料</li>
+        <li>2 年保証・14 日返品</li>
+        <li>予約特典：紫のカスタムケーブルセット</li>
+      </ul>
+      <div class="actions reveal">
+        <input type="email" class="email-input" placeholder="your@email.jp" aria-label="メールアドレス" />
+        <button class="btn-p">今すぐ予約する</button>
+        <button class="btn-g btn-icon" aria-label="仕様書をダウンロード">
+          <span>仕様書</span>
+          <svg width="12" height="13" viewBox="0 0 12 13" fill="none" aria-hidden="true">
+            <path d="M6 1 V8.5 M2.5 5.5 L6 9 L9.5 5.5 M1 11.5 H11"
+                  stroke="currentColor" stroke-width="1"
+                  stroke-linecap="square" stroke-linejoin="miter" />
+          </svg>
+        </button>
+      </div>
+      <p class="price-note reveal">※価格は本体のみ。パーツは含まれません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FAQ + FOOTER ═══════════════════════ -->
+<section id="s-faq" class="stripe full" data-theme="dark">
+  <div class="stripe-inner">
+    <div class="faq-wrap">
+      <div class="tag reveal">// FAQ</div>
+      <h2 class="headline reveal">よくある<em>質問。</em></h2>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">自分のマザーボードは入りますか？<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>E-ATX まで対応。詳しくは仕様表を参照してください。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">予約はいつ発送されますか？<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>2026 年 第 2 四半期、初回ロット。注文順に発送します。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">保証は？<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>メーカー保証 2 年。初期不良は 14 日以内に交換いたします。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">色違いは出ますか？<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>現時点では Arctic White のみ。今後の展開は SNS で告知します。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">予約特典のケーブルセットは何が入っていますか？<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>24-pin、EPS 8-pin、PCIe 8-pin × 2 の紫の編組ケーブルセットです。</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="faq-credits reveal">
+    <div class="fl">Yumebana<em>.</em></div>
+    <div>© 2026 Yumebana. All Rights Reserved.</div>
+    <div>Hyouga · Chiba · Japan</div>
+  </div>
+</section>
+
+<button class="btn-back-top" type="button" aria-label="ページ上部へ">
+  <svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true">
+    <path d="M2 7 L7 2 L12 7"
+          stroke="currentColor"
+          stroke-width="1"
+          stroke-linecap="square"
+          stroke-linejoin="miter" />
+  </svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
